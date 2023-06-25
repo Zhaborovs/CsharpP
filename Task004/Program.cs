@@ -8,9 +8,6 @@ int number2 = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("введите целочисленное число 3 ");
 int number3 = Convert.ToInt32(Console.ReadLine());
 int max = number1;
-int cout = 0;
-while (cout=2)
-{
-if
-cout++;
-}
+if (max < number2) { max = number2; }
+if (max < number3) { max = number3; }
+Console.WriteLine($"максимальное число это {max} ");
