@@ -5,12 +5,12 @@
 2 -> " -2, -1, 0, 1, 2"
  */
 
- Console.WriteLine("введите целое положительное число:");
+Console.WriteLine("введите целое положительное число:");
 int number = Convert.ToInt32(Console.ReadLine());
 int count = -number;
-while(count <= number)
+while (count <= number)
 {
-    Console.Write(count+" ");
+    Console.Write(count + " ");
     count++;
     //count +=1;
 }
