@@ -7,5 +7,7 @@ int number = Convert.ToInt32(Console.ReadLine());
 
 if (number > 0 && number < 8)
 {
-
+if (number >= 6 && number <= 7) Console.WriteLine($"{number}*й день недели является выходным.");
+else Console.WriteLine($"{number}*й день недели НЕ является выходным.");
 }
+else Console.WriteLine($"{number}*й день недели НЕ существует");
