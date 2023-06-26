@@ -3,7 +3,7 @@
 (делится ли оно на два без остатка).
  */
 
- Console.WriteLine("введите целочисленное число");
+Console.WriteLine("введите целочисленное число");
 int number1 = Convert.ToInt32(Console.ReadLine());
-if(0 == number1 % 2){Console.WriteLine($" {number1} является четным числом. ");}
-else {Console.WriteLine($" {number1} не является целочислиным или четным числом. ");}
+if (number1 % 2 == 0) Console.WriteLine($" {number1} является четным числом. ");
+else Console.WriteLine($" {number1} не является четным числом. ");
