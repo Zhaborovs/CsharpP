@@ -16,8 +16,6 @@ int rand = Convert.ToInt32(Console.ReadLine());
 
 int[] arrayNums = new int[number];
 
-arrayNums[4] = 231;
-
 Massive(arrayNums, rand);
 printArray(arrayNums);
 
