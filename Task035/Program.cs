@@ -55,14 +55,6 @@ int CountTwoDigitNumbers(int[] arr)
 
 
 
-
-
-
-
-
-
-
-
 int[] array = CreateArrayRndInt(123, -1000, 1000);
 int result = CountTwoDigitNumbers(array);
 Console.Write($"[");
