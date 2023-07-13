@@ -18,7 +18,11 @@ double b2 = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine("Введите значение k2:");
 double k2 = Convert.ToDouble(Console.ReadLine());
-
+if(b1 == b2 && k1 == k2)
+{
+Console.WriteLine($"при идентичных значениях(K1)=(K2) и (В1)=(В2) это индентичные прямые");
+return;
+}
 if(k1 == k2)
 {
 Console.WriteLine($"при идентичных значениях(K1)=(K2) пересечение прямых невозможно");
