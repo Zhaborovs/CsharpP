@@ -1,6 +1,10 @@
-﻿/* Задача 53: Задайте двумерный массив. Напишите программу,
-которая поменяет местами первую и последнюю строку
-массива. */
+﻿/* 
+Задача 55: Задайте двумерный массив. Напишите программу,
+которая заменяет строки на столбцы. В случае, если это
+невозможно, программа должна вывести сообщение для
+пользователя.
+ */
+
 
 int[,] CreateMatrixRndInt(int rows, int columns, int min = -10, int max = 10)
 {
@@ -33,21 +37,26 @@ void PrintMatrix(int[,] matrix)
     }
 }
 
-void ReplaceRows(int[,] matrix)
+void RotateMatrix(int[,] matrix)
 {
-    int last = matrix.GetLength(0) - 1;
-    int temp = 0;
-
-    for (int i = 0; i < matrix.GetLength(0); i++)
+    if (matrix.GetLength(0) == matrix.GetLength(1))
     {
-        temp = matrix[0, i];
-        matrix[0, i] = matrix[last, i];
-        matrix[last, i] = temp;
+        int temp = 0;
+        for (int i = 0; i < matrix.GetLength(0); i++)
+        {
+            for (int j = 0; j < i; j++)
+            {
+                temp = matrix[i, j];
+                matrix[i, j] = matrix[j, i];
+                matrix[j, i] = temp;
+            }
+        }
     }
+    return;
 }
 
-int[,] array2d = CreateMatrixRndInt(3, 4, -10, 10);
+int[,] array2d = CreateMatrixRndInt(4, 4, -10, 10);
 PrintMatrix(array2d);
-ReplaceRows(array2d);
+RotateMatrix(array2d);
 Console.WriteLine();
 PrintMatrix(array2d);
