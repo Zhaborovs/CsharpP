@@ -8,7 +8,7 @@
 
  */
 
-int[,] CreateMatrixInt(int rows, int columns)
+int[,] CreateSpiralMatrixInt(int rows, int columns)
 {
     //                     0      1
     int[,] arr = new int[rows, columns];
@@ -59,11 +59,11 @@ void PrintMatrix(int[,] matrix)
         Console.Write("|");
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            //                                        форматирование строк
+            //                             форматирование строк
             Console.Write($"{matrix[i, j],5} ");
         }
         Console.WriteLine("|");
     }
 }
 
-PrintMatrix(CreateMatrixInt(4,2));
+PrintMatrix(CreateSpiralMatrixInt(4,2));
